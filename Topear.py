@@ -11,11 +11,8 @@ df = sc.read.json(path)
 df_con_medias = df.groupBy("beer/name").agg(spark_round(avg("review/note"), 2).alias("note_average"))
 
 #Ordenar por la nota media
-df_ordenado = df_con_medias.orderBy(desc("note_average"))
+df_final = df_con_medias.orderBy(desc("note_average"))
 
-#Atributos que queremos mostrar
-df_final = df_ordenado.select("beer/name", "note_average")
-
-df_final.show()
+df_final.show(truncate=False)
 
 sc.stop()
