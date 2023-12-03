@@ -3,3 +3,7 @@
 - sacar la cerveza mas criticada y intentar saber porque, es buena o mala? buscando palabras clave en la cadena o por la media hallada en la consulta anterior.
 - da la posibilidad al usuario de buscar una cerveza y que salgan datos como la media y salgan datos a resaltar o reseñenas(mejor y peor?)
 - ver cuales son las cervezas son de la misma dervecera, topear dentro de la propia cervecera
+
+Hecho:
+- dados los porcentajes del beerabdocate sacar la nota de cada cerveza, topear las cervezas por nombre, por tipo...
+- ver cuales son las cervezas son de la misma dervecera, topear las cerveceras, topear dentro de la cervecera
