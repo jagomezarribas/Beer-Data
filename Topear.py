@@ -13,6 +13,6 @@ df_con_medias = df.groupBy("beer/name").agg(spark_round(avg("review/note"), 2).a
 #Ordenar por la nota media
 df_final = df_con_medias.orderBy(desc("note_average"))
 
-df_final.show(truncate=False)
+df_final.show(df_final.count(), truncate=False)
 
 sc.stop()

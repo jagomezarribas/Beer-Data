@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, avg, collect_list, desc
+from pyspark.sql.functions import col, avg, collect_list, desc,  round as spark_round
 import sys
 
 # Crear una sesión de Spark
@@ -17,7 +17,7 @@ df = df.withColumn("review/note", col("review/note").cast("float"))
 df_filtrado = df.filter(df["beer/brewerId"] == cervecera)
 
 # Calcular la nota media por cerveza
-df_notas_medias = df_filtrado.groupBy("beer/name").agg(avg("review/note").alias("beers_average"))
+df_notas_medias = df_filtrado.groupBy("beer/name").agg(spark_round(avg("review/note"), 2).alias("beers_average"))
 
 #Ordenar por la nota media
 df_ordenado = df_notas_medias.orderBy(desc("beers_average"))
