@@ -1,10 +1,11 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, round as spark_round
 
+#Creamos una sesión de Spark
 sc = SparkSession.builder.appName("NoteJSON").getOrCreate()
 
+#Cargamos el archivo JSON en un DataFrame
 path = "beeradvocate.json"
-
 df_originial = sc.read.json(path)
 
 #Sacamos nota aplicando porcentajes
