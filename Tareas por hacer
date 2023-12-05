@@ -6,4 +6,5 @@
 
 Hecho:
 - dados los porcentajes del beerabdocate sacar la nota de cada cerveza, topear las cervezas por nombre, por tipo...
-- ver cuales son las cervezas son de la misma dervecera, topear las cerveceras, topear dentro de la cervecera
+- ver cuales son las cervezas son de la misma dervecera, topear las cerveceras, topear dentro de la cervecera que el usuario introduce con su id
+- clasificar/topear por grado de alcohol, y sacar las cervezas que están en un rango de grado de alcohol introducido por usuario
