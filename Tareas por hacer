@@ -1,6 +1,6 @@
 - dados los porcentajes del beerabdocate sacar la nota de cada cerveza, topear las cervezas, clasificarlas por nombre, tipo de cerveza(de aqui hacer medias de cada tipo) y clasicar por rangos. aqui sacamos 3
 - clasificar por grado de alcohol y sacar todo lo demas a ria de esto.
-- da la posibilidad al usuario de buscar una cerveza y que salgan datos como la media y salgan datos a resaltar o reseñenas(mejor y peor?)
+- da la posibilidad al usuario de buscar una cerveza y que salgan datos como la media y salgan datos a resaltar o reseñas(mejor y peor?)
 - ver cuales son las cervezas son de la misma dervecera, topear dentro de la propia cervecera
 
 Modificar:
