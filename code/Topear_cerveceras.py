@@ -14,7 +14,7 @@ df = df.withColumn("review/note", col("review/note").cast("float"))
 #Calculamos la nota media por cerveza
 df_notas_medias = df.groupBy("beer/name", "beer/brewerId").agg(spark_round(avg("review/note"), 2).alias("beers_average"))
 
-#Agrupamos por "beer/brewerId" y obtenemos una lista de "beer/name" ordenadas por nota media
+#Agrupamos por "beer/brewerId" y obtenemos una lista de "beer/name" ordenadas por nota media de las cerveceras de cada cervecera
 df_agrupado = df_notas_medias.groupBy("beer/brewerId") \
                 .agg(collect_list("beer/name").alias("beer_names"), spark_round(avg("beers_average"), 2).alias("brewer_average")) \
                 .orderBy(desc("brewer_average"))
