@@ -1,2 +1,21 @@
 Para poder descargar los datasets necesarios seguir el siguiente enlace:
 https://drive.google.com/file/d/1vjSE_9jBK57TYwqUhIQ2zHbTSk7UfHPo/view?usp=sharing
+
+Formato del dataset original:
+{
+  "beer/name": "Sausa Weizen",
+  "beer/beerId": "47986",
+  "beer/brewerId": "10325",
+  "beer/ABV": "5.00",
+  "beer/style": "Hefeweizen",
+  "review/appearance": "2.5",
+  "review/aroma": "2",
+  "review/palate": "1.5",
+  "review/taste": "1.5",
+  "review/overall": "1.5",
+  "review/time": "1234817823",
+  "review/profileName": "stcules",
+  "review/text": "A lot of foam. But a lot.\tIn the smell some banana, and then lactic and tart. Not a good start.\tQuite dark orange in color, with a lively carbonation (now visible, under the foam).\tAgain tending to lactic sourness.\tSame for the taste. With some yeast and banana."
+}
+
+Link del dataset original: https://www.kaggle.com/datasets/volodymyrpivoshenko/multi-aspect-beer-reviews
