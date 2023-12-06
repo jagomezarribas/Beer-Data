@@ -23,8 +23,11 @@ df_max_note = df_max_note.withColumnRenamed("beer/name", "beer/max_name")
 df_min_note = df_min_note.withColumnRenamed("beer/name", "beer/min_name")
 
 # Unir los DataFrames que contienen las notas máximas y mínimas con el DataFrame original
-df_max_review = df.join(df_max_note, (df["beer/name"] == df_max_note["beer/max_name"]) & (df["review/note"] == df_max_note["beer/max_note"])).groupBy("beer/name").agg(first("review/text").alias("beer/best_text"), first("beer/max_note").alias("beer/max_note"))
-df_min_review = df.join(df_min_note, (df["beer/name"] == df_min_note["beer/min_name"]) & (df["review/note"] == df_min_note["beer/min_note"])).groupBy("beer/name").agg(first("review/text").alias("beer/worst_text"), first("beer/min_note").alias("beer/min_note"))
+df_max_review = df.join(df_max_note, (df["beer/name"] == df_max_note["beer/max_name"]) & (df["review/note"] == df_max_note["beer/max_note"])) \
+                    .groupBy("beer/name").agg(first("review/text").alias("beer/best_text"), first("beer/max_note").alias("beer/max_note"))
+                    
+df_min_review = df.join(df_min_note, (df["beer/name"] == df_min_note["beer/min_name"]) & (df["review/note"] == df_min_note["beer/min_note"])) \
+                    .groupBy("beer/name").agg(first("review/text").alias("beer/worst_text"), first("beer/min_note").alias("beer/min_note"))
 
 
 #Unimos para juntar la nota media con las veces que se ha hecho una review de la cerveza (count)
