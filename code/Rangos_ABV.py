@@ -1,3 +1,7 @@
+"""
+El usuario introduce un Rango de % de alcohol y se le topean las cervezas dentro de ese rango
+"""
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, floor, avg, desc, round as spark_round
 import sys

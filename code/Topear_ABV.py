@@ -1,3 +1,7 @@
+"""
+Agrupa por grado de alcohol, hace la media de notas y lista las cervezas
+"""
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, avg, collect_list, desc, round as spark_round
 

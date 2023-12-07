@@ -1,3 +1,7 @@
+"""
+El usuario mete el id de la cervecera que le interesa y se le topean las cervezas de esa cervecera
+"""
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, avg, collect_list, desc,  round as spark_round
 import sys
