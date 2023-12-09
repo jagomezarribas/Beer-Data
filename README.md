@@ -64,8 +64,8 @@ $ gcloud dataproc clusters create example-cluster --region europe-west6 --master
    2. Click CREATE.
    3. Rellena la información del bucket information y click CONTINUE para completar los siguientes pasos:
          * Dar nombre al bucket: debe ser único.
-         * Elegir para <strong>Location type</strong>: Region y para Location:europe-west6 (Zurich).
-         * Elegir para Default Storage Class: Standard.
-         * Habilite Enforce public access prevention on this bucket y elija Uniform for Access control.
-         * Elija None for Protection tools.
+         * Elegir para <strong>Location type</strong>: Region y para <strong>Location</strong>: europe-west6 (Zurich).
+         * Elegir para <strong>Default Storage Class</strong>: Standard.
+         * Habilite <strong>Enforce public access prevention on this bucket</strong> y elija <strong>Uniform for Access control</strong>.
+         * Elija <strong>None for Protection tools</strong>.
    4. Click CREATE
