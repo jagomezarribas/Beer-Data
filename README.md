@@ -48,3 +48,7 @@ $ sudo apt install python3-pip
 spark-submit /usr/local/spark/examples/src/main/python/pi.py 10
 ```
 Si todo se ha instalado correctamente debería salirnos una línea diciendo : Pi is roughly 3.142480
+Una vez la instalación se ha efectuado correctamente, ya podemos ejecutar los scripts del proyecto usando el siguiente comando:
+```
+spark-submit <nombre_fichero.py>
+```
