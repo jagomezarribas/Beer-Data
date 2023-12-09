@@ -42,5 +42,9 @@ $ source ~/.profile
 5. **Instalación de librerias**
 ```
 $ sudo apt install python3-pip
-$ pip install wordcloud
-$ sudo apt-get install python3-matplotlib
+```
+6. **Comprobación de buena instalación**
+```
+spark-submit /usr/local/spark/examples/src/main/python/pi.py 10
+```
+Si todo se ha instalado correctamente debería salirnos una línea diciendo : Pi is roughly 3.142480
