@@ -69,3 +69,13 @@ $ gcloud dataproc clusters create example-cluster --region europe-west6 --master
          * Habilite <strong>Enforce public access prevention on this bucket</strong> y elija <strong>Uniform for Access control</strong>.
          * Elija <strong>None for Protection tools</strong>.
    4. Click CREATE
+
+Una vez ya creado el Cluster y el Bucket hay dos formas de ejecutar el código:
+* Mediante envios de trabajos a Spark:
+  ```
+  $ BUCKET=gs://$BEER_DATA_PROJECT
+  $ gcloud dataproc jobs submit pyspark --cluster example-cluster --region=europe-west6 $BUCKET/<nombre_fichero.py> -- $BUCKET/<nombre_dataset.json> $BUCKET/<nombre_output>
+  ```
+
+  
+  
