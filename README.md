@@ -52,3 +52,10 @@ Una vez la instalación se ha efectuado correctamente, ya podemos ejecutar los s
 ```
 $ spark-submit <nombre_fichero.py>
 ```
+
+## Instancia en Google Cloud
+1. **Creación de Cluster en Cloud**
+```
+$ gcloud dataproc clusters create example-cluster --region europe-west6 --master-boot-disk-size 50GB --worker-boot-disk-size 50GB --enable-component-gateway
+```
+
