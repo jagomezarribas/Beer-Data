@@ -35,7 +35,6 @@ $ tar xvf spark-3.3.1-bin-hadoop3.tgz
 $ sudo mv spark-3.3.1-bin-hadoop3 /usr/local/spark
 ```
 4. **Configuración del entorno** <br />
-Se añade /usr/local/spark/bin al PATH en el fichero ~/.profile. Después de actualiza el PATH en la sesión actual.
 ```
 $ echo 'PATH="$PATH:/usr/local/spark/bin"' >> ~/.profile
 $ source ~/.profile
