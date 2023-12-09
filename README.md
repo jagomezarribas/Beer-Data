@@ -1,6 +1,9 @@
 # Beer-Data
 Big Data project about beers around the world
 
+# Links
+[Página web del proyecto]()
+
 # Datos
 * [Dataset de Kaggle](https://www.kaggle.com/datasets/volodymyrpivoshenko/multi-aspect-beer-reviews)
 Dataset con más de millón y medio de reviews entre los años 1998-2011 con cervezas de todo el mundo en donde se encuentra una descripción detallada de cada cerveza con caracteírsticas fundamentales como el ABV, sabor, apariencia, aroma...
@@ -11,5 +14,8 @@ Dataset con el original obtenido de Kaggle y otro creado por nosotro, el script 
     * 40% Sabor
     * 10% Sensación
     * 20% Impresión general
-  
+
+  # Pasos previos ejecución
+  Para poder procesar los scripts que hemos desarrollado en un equipo Ubuntu o en una instancia de Google Cloud, antes deben seguir los siguientes pasos:
+  ## Equipo Ubuntu
 
