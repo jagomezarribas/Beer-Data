@@ -55,6 +55,7 @@ $ spark-submit <nombre_fichero.py>
 
 ## Instancia en Google Cloud
 1. **Creación de Cluster en Cloud**
+En la consola de Cloud:
 ```
 $ gcloud dataproc clusters create example-cluster --region europe-west6 --master-boot-disk-size 50GB --worker-boot-disk-size 50GB --enable-component-gateway
 ```
