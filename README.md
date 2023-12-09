@@ -59,12 +59,12 @@ En la consola de Cloud:
 ```
 $ gcloud dataproc clusters create example-cluster --region europe-west6 --master-boot-disk-size 50GB --worker-boot-disk-size 50GB --enable-component-gateway
 ```
-2. **Creación Bucket:
+2. **Creación Bucket** <br />
    1. Ve a Navigation menu () > Cloud Storage > Buckets.
    2. Click CREATE.
    3. Rellena la información del bucket information y click CONTINUE para completar los siguientes pasos:
          * Dar nombre al bucket: debe ser único.
-         * Elegir para <strong>Location type: Region y para Location:europe-west6 (Zurich).
+         * Elegir para <strong>Location type<strong>: Region y para Location:europe-west6 (Zurich).
          * Elegir para Default Storage Class: Standard.
          * Habilite Enforce public access prevention on this bucket y elija Uniform for Access control.
          * Elija None for Protection tools.
