@@ -18,4 +18,30 @@ Dataset con el original obtenido de Kaggle y otro creado por nosotro, el script 
   # Pasos previos ejecución
   Para poder procesar los scripts que hemos desarrollado en un equipo Ubuntu o en una instancia de Google Cloud, antes deben seguir los siguientes pasos:
   ## Equipo Ubuntu
-
+1. **Instalación de Java**<br />
+ ```
+ $ sudo apt install default-jre
+ $ java -version
+ ```
+2. **Instalación de Python**
+```
+$ sudo apt-get update
+$ sudo apt-get install python3.6
+```
+3. **Instalación de Spark**
+```
+$ curl -O https://archive.apache.org/dist/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
+$ tar xvf spark-3.3.1-bin-hadoop3.tgz
+$ sudo mv spark-3.3.1-bin-hadoop3 /usr/local/spark
+```
+4. **Configuración del entorno** <br />
+Se añade /usr/local/spark/bin al PATH en el fichero ~/.profile. Después de actualiza el PATH en la sesión actual.
+```
+$ echo 'PATH="$PATH:/usr/local/spark/bin"' >> ~/.profile
+$ source ~/.profile
+```
+5. **Instalación de librerias**
+```
+$ sudo apt install python3-pip
+$ pip install wordcloud
+$ sudo apt-get install python3-matplotlib
