@@ -47,4 +47,4 @@ $ sudo apt install python3-pip
 ```
 spark-submit /usr/local/spark/examples/src/main/python/pi.py 10
 ```
-   Si todo se ha instalado correctamente debería salirnos una línea diciendo : Pi is roughly 3.142480
+      Si todo se ha instalado correctamente debería salirnos una línea diciendo : Pi is roughly 3.142480
