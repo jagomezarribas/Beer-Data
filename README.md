@@ -76,6 +76,11 @@ Una vez ya creado el Cluster y el Bucket hay dos formas de ejecutar el código:
   $ BUCKET=gs://$BEER_DATA_PROJECT
   $ gcloud dataproc jobs submit pyspark --cluster example-cluster --region=europe-west6 $BUCKET/<nombre_fichero.py> -- $BUCKET/<nombre_dataset.json> $BUCKET/<nombre_output>
   ```
+* Ir a Dataproc>Cluster>Cluster_info>Virtual Machines y entrar en master:
+  ```
+  $ spark-submit --master local[4] filter_cloud.py
+  $ spark-submit --num-executors 4 --executor-cores 4 filter_cloud.py
+  ```
 
   
   
