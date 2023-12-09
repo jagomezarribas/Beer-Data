@@ -11,4 +11,5 @@ Dataset con el original obtenido de Kaggle y otro formado por nosotros en donde 
     * 40% Sabor
     * 10% Sensación
     * 20% Impresión general
+  
 Para crear este dataset que se utiliza hemos utilizado un script que se encuentra alojado en la carpeta **code** llamado [Crear_dataset.py](https://github.com/ROGOSE/Beer-Data/blob/main/code/Crear_dataset.py)
