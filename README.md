@@ -78,8 +78,7 @@ Una vez ya creado el Cluster y el Bucket hay dos formas de ejecutar el código:
   ```
 * Ir a Dataproc>Cluster>Cluster_info>Virtual Machines y entrar en master:
   ```
-  $ spark-submit --master local[4] filter_cloud.py
-  $ spark-submit --num-executors 4 --executor-cores 4 filter_cloud.py
+  $ spark-submit --num-executors <n_executors> --executor-cores <n_cores> filter_cloud.py
   ```
 
   
