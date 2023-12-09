@@ -15,9 +15,9 @@ Dataset con el original obtenido de Kaggle y otro creado por nosotro, el script 
     * 10% Sensación
     * 20% Impresión general
 
-  # Pasos previos ejecución
-  Para poder procesar los scripts que hemos desarrollado en un equipo Ubuntu o en una instancia de Google Cloud, antes deben seguir los siguientes pasos:
-  ## Equipo Ubuntu
+# Pasos previos ejecución
+Para poder procesar los scripts que hemos desarrollado en un equipo Ubuntu o en una instancia de Google Cloud, antes deben seguir los siguientes pasos:
+## Equipo Ubuntu
 1. **Instalación de Java**<br />
  ```
  $ sudo apt install default-jre
