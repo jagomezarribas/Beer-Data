@@ -70,7 +70,7 @@ $ gcloud dataproc clusters create example-cluster --region europe-west6 --master
          * Elija <strong>None for Protection tools</strong>.
    4. Click CREATE
 
-Una vez ya creado el Cluster y el Bucket hay dos formas de ejecutar el código:
+   Una vez ya creado el Cluster y el Bucket hay dos formas de ejecutar el código:
 * Mediante envios de trabajos desde Cloud Shell:
   ```
   $ BUCKET=gs://$BEER_DATA_PROJECT
