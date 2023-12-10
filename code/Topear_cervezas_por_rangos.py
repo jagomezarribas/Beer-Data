@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import avg, desc, round as spark_round
+from pyspark.sql.functions import avg, round as spark_round
 
 #Creamos una sesión de Spark
 sc = SparkSession.builder.appName("Rangos_ABV").getOrCreate()
