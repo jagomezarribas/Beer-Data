@@ -1,5 +1,7 @@
 # Beer-Data
-Proyecto final de BigData analizando cervezas de todo el mundo, hecho por:
+Proyecto final de BigData basado en el análisis y estudio de cervezas de todo el mundo con más de millón y medio de reseñas sobre más de 50.000 cervezas diferentes.
+
+# Miembros del grupo
    * Alberto Gómez de Andrés
    * Rodrigo Gómez Serrano
    * Gabriel Casado Valcárcel
@@ -91,5 +93,14 @@ $ gcloud dataproc clusters create example-cluster --region europe-west6 --master
   $ spark-submit --num-executors <n_executors> --executor-cores <n_cores> filter_cloud.py
   ```
 
+# Descripción de código:
+Se han desarrollado una serie de scripts en lenguaje Python utilizando Apache Spark como framework de computación de los cuales describiremos su funcionalidad a continucación:
+  * [Cervezas_más_populares.py](https://github.com/ROGOSE/Beer-Data/blob/main/code/Cervezas_m%C3%A1s_populares.py): se obtiene por salida una lista ordenada de forma decreciente con las cervezas más populares (las que tienen más reseñas), con el número de reviews que tiene, con la nota media de la cerveza, así como la nota de su mejor y peor review y su corespondiente comentario.
+  * [Topear_cervezas_por_rango.py](https://github.com/ROGOSE/Beer-Data/blob/main/code/Topear_cervezas_por_rangos.py): se obtiene por salida un listado con las cervezas ordenadas por su nota media y agrupadas por rangos de la nota media, los rangos son:
+      * Rango 1: 0 <= nota media
+      * Rango 2:
+      * Rango 3:
+      * Rango 4:
+      * Rango 5:
   
   
