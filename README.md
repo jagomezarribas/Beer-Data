@@ -1,8 +1,12 @@
 # Beer-Data
-Big Data project about beers around the world
+Proyecto final de BigData analizando cervezas de todo el mundo, hecho por:
+   * Alberto Gómez de Andrés
+   * Rodrigo Gómez Serrano
+   * Gabriel Casado Valcárcel
+   * Javier Gómez Arribas 
 
 # Links
-[Página web del proyecto]()
+[Página web del proyecto](https://gacasado.github.io/Beer-Data.github.io/)
 
 # Datos
 * [Dataset de Kaggle](https://www.kaggle.com/datasets/volodymyrpivoshenko/multi-aspect-beer-reviews)
