@@ -17,7 +17,7 @@ df_final = df_notas_medias.orderBy(("beers_average"))
 #Creamos una tabla por cada rango en la nota media
 for i in range(5):
     df_fx = df_final.filter((df_final['beers_average'] > i) & (df_final['beers_average'] <= i+1))
-    df_fx.coalesce(1).write.options(header = 'True', delimiter = '  ').mode("overwrite").csv("../CSV's/Topear_cervezas_por_rangos/" + "Rango " + str(i+1))
+    df_fx.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("../CSV's/Topear_cervezas_por_rangos/" + "Rango " + str(i+1))
     df_fx.show(df_fx.count(), truncate=False)
 
 sc.stop()
