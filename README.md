@@ -82,7 +82,7 @@ Una vez ya creado el Cluster y el Bucket hay dos formas de ejecutar el código:
   $ BUCKET=gs://$GOOGLE_CLOUD_PROJECT
   $ spark-submit $BUCKET/wordcount.py $BUCKET/input $BUCKET/output3
   ```
-  Se puede cambiar el número de <em>executors</em> y <em>cores</em> con los que queremos trabajar:
+  Se puede cambiar el número de <strong><em>executors</em></strong> y <strong><em>cores</em></strong> con los que queremos trabajar: <br />
   $ spark-submit --num-executors <n_executors> --executor-cores <n_cores> filter_cloud.py
   ```
 
