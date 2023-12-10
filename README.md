@@ -95,12 +95,14 @@ $ gcloud dataproc clusters create example-cluster --region europe-west6 --master
 
 # Descripción de código:
 Se han desarrollado una serie de scripts en lenguaje Python utilizando Apache Spark como framework de computación de los cuales describiremos su funcionalidad a continucación:
-  * [Cervezas_más_populares.py](https://github.com/ROGOSE/Beer-Data/blob/main/code/Cervezas_m%C3%A1s_populares.py): se obtiene por salida una lista ordenada de forma decreciente con las cervezas más populares (las que tienen más reseñas), con el número de reviews que tiene, con la nota media de la cerveza, así como la nota de su mejor y peor review y su corespondiente comentario.
-  * [Topear_cervezas_por_rango.py](https://github.com/ROGOSE/Beer-Data/blob/main/code/Topear_cervezas_por_rangos.py): se obtiene por salida un listado con las cervezas ordenadas por su nota media y agrupadas por rangos de la nota media, los rangos son:
-      * Rango 1: 0 <= nota media
-      * Rango 2:
-      * Rango 3:
-      * Rango 4:
-      * Rango 5:
+  * [Cervezas_más_populares.py](https://github.com/ROGOSE/Beer-Data/blob/main/code/Cervezas_m%C3%A1s_populares.py): se obtiene un csv con una lista ordenada de forma decreciente con las cervezas más populares (las que tienen más reseñas), con el número de reviews que tiene, con la nota media de la cerveza, así como la nota de su mejor y peor review y su corespondiente comentario. Los csv's resultantes se puede unificr todo en uno, o crear dos uno con las mejores notas y sus reviews y otro con las peores.
+  * [Topear_cervezas_por_rango.py](https://github.com/ROGOSE/Beer-Data/blob/main/code/Topear_cervezas_por_rangos.py): se obtiene un csv con un listado con las cervezas ordenadas por su nota media y agrupadas por rangos de la nota media, los rangos son:
+      * Rango 1: 0 < nota media <= 1
+      * Rango 2: 1 < nota media <= 2
+      * Rango 3: 2 < nota media <= 3
+      * Rango 4: 3 < nota media <= 4
+      * Rango 5: 4 < nota media <= 5
+  * [Mejores_cervezas_por_año](https://github.com/ROGOSE/Beer-Data/blob/main/code/Mejores_cervezas_por_a%C3%B1o.py): se obtiene un csv con una lista en la que por cada año se saca un ranking de las 5 mejores cervezas valoradas ese año, con su nota media y el nombre de la cerveza.
+  * [Topear_cerveceras_con_cervezas](https://github.com/ROGOSE/Beer-Data/blob/main/code/Topear_cerveceras_con_cervezas.py): se obtiene un csv con el listado de todas las cerveceras que hay en el dataset ordenado por su nota media que se ha obtenido sacando la nota media de todas las cervezas que ha producido ese cervecera, y uan vez obtenido todas las medias volver a hacer la media con todas ellas. Y además al se incluye una columan con el nombre de todas las cervezas creadas por dicha cervecera. 
   
   
