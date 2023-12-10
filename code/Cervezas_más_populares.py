@@ -40,7 +40,7 @@ df_max_min_review = df_max_review.join(df_min_review.select("beer/name", "beer/m
 
 #Hacemos join para juntar los datos de las reviews con la nota media y el count y ordenamos por count
 df_final = df_join.join(df_max_min_review.select("beer/name", "beer/max_note", "beer/best_text", "beer/min_note", "beer/worst_text"), "beer/name").orderBy(desc("beer/count"))
-
+df_final.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("../CSV's/Cervezas_más_populares/" + "Tabla_única")
 df_final.show(truncate=False)
 
 """
@@ -51,6 +51,9 @@ df_final_max = df_join.join(df_max_review.select("beer/name", "beer/max_note", "
 
 #Hacemos join para juntar con las peores reviews con la nota media y el count y ordenado por count
 df_final_min = df_join.join(df_min_review.select("beer/name", "beer/min_note", "beer/worst_text"), "beer/name").orderBy(desc("beer/count"))
+
+df_final_max.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("../CSV's/Cervezas_más_populares/" + "Tabla_max")
+df_final_min.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("../CSV's/Cervezas_más_populares/" + "Tabla_min")
 
 df_final_max.show(truncate=False)
 df_final_min.show(truncate=False)
