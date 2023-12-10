@@ -1,8 +1,6 @@
 from datetime import datetime
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import udf, year, col, desc, avg, collect_list, round as spark_round, rank, struct, slice
-from pyspark.sql.window import Window
-
+from pyspark.sql.functions import udf, year, col, desc, avg, collect_list, round as spark_round, struct, slice, concat_ws, transform
 
 #Configuración de la sesión de Spark
 sc = SparkSession.builder.appName("FavoriteBeerByYear").getOrCreate()
@@ -43,8 +41,23 @@ df_struct = df_beer.withColumn("ordered_styles", struct(col("style_average"), co
 #Agrupamos por año, recogemos todas las cervezas en una lista y seleccionamos solo las 5 mejores (que serán las primeras)
 df_top_beers = df_struct.groupBy("review/year").agg(slice(collect_list("ordered_styles"), 1, 5).alias("top_beers"))
 
+#Convertimos cada estructura en la columna "top_beers" a una cadena
+df_top_beers = df_top_beers.withColumn(
+    "top_beers", 
+    transform(
+        col("top_beers"), 
+        lambda s: concat_ws(": ", s["style_average"].cast("string"), s["beer/style"])
+    )
+)
+
+#Convertimos la columna "top_beers" a una cadena
+df_top_beers = df_top_beers.withColumn("top_beers", concat_ws(", ", col("top_beers")))
+
 #Ordenamos por año
 df_final = df_top_beers.orderBy(desc("review/year"))
+
+#Guardamos el Dataframe en un csv
+df_final.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("../CSV's/Mejores_cervezas_por_año/")
 
 df_final.show(df_final.count(), truncate=False)
 
