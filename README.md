@@ -8,7 +8,7 @@ Proyecto final de BigData basado en el análisis y estudio de cervezas de todo e
    * Javier Gómez Arribas 
 
 # Links
-[Página web del proyecto](https://gacasado.github.io/Beer-Data.github.io/)
+[Página web del proyecto](https://rogose.github.io/Beer-Data.github.io/)
 
 # Datos
 * [Dataset de Kaggle](https://www.kaggle.com/datasets/volodymyrpivoshenko/multi-aspect-beer-reviews)
