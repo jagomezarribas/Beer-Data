@@ -6,7 +6,7 @@ sc = SparkSession.builder.appName("Popularidad").getOrCreate()
 
 #Cargamos el archivo JSON en un DataFrame
 path = "beeradvocate_note.json"
-df = sc.read.json(path)
+df = sc.read.json(sys.argv[1])
 
 #Agrupamos por nombre y sacamos nota media con todas las reviews
 df_con_medias = df.groupBy("beer/name").agg(spark_round(avg("review/note"), 2).alias("beer_average"))
