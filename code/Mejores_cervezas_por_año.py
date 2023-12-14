@@ -57,7 +57,7 @@ df_top_beers = df_top_beers.withColumn("top_beers", concat_ws(", ", col("top_bee
 df_final = df_top_beers.orderBy(desc("review/year"))
 
 #Guardamos el Dataframe en un csv
-df_final.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("sys.argv[2]/")
+df_final.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv(sys.argv[2])
 
 df_final.show(df_final.count(), truncate=False)
 
