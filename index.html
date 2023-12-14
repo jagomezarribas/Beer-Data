@@ -1,0 +1,215 @@
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BEER DATA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://kit.fontawesome.com/8692fd9b17.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">BEER DATA VIEWER</td>
+                <td id="navigation">
+                    <a href="#project">project</a>
+                    <!--<a href="#why">why</a>-->
+                    <a href="#data">data</a>  <!--antes habia: <a href="">data</a>-->
+                    <a href="#manual">manual</a>  <!--antes no habia nada-->
+                    <a href="#statistics">statistics</a> 
+                    <!-- antes <a href="#performance"> performance</a>  <a href="#outcome"> outcome</a>-->
+                    <a href="#conclusion">conclusion</a>  <!--antes no habia nada-->
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+                <h1>Beer Data, the Face of Beer Reviews</h1>
+                <button class="btn_one">Grab a Beer</button><br>
+                <!--<table>
+                    <tr>
+                        <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"><i class="fab fa-twitter"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"><i class="fab fa-instagram"></i></a></td>
+                    </tr>
+                </table>-->
+            </td>
+            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
+    <div id="project">
+        <h1>project</h1>
+        <p>
+            Una gran cantidad de la población mundial consume cerveza frecuentemente. Para aquellas personas que se quieren introducir más a fondo en el extenso mundo de la cerveza, presentamos un proyecto en el que analizaremos una base de datos y sacaremos patrones y estadísticas importantes. Actualmente existen gran cantidad de marcas de cerveza, algunas de ellas muy conocidas, pero esto no implica que sean las mejores. Con este trabajo queremos aportar un punto de vista menos comercial en el que las cervezas se valoren únicamente por su calidad y no por la popularidad.
+        </p>
+        <h2>Need for Big Data</h2>
+        <p>
+            La subjetividad juega un papel muy importante en este ámbito, cada persona puede tener una opinión distinta sobre la misma cerveza. Por ello también, en la medida de lo posible, queremos centralizar mucha información haciendo uso del Big Data, para así generalizar las múltiples opiniones y facilitar la búsqueda de información al usuario.
+        </p>
+    </div>
+    <div id="data">
+        <h1>data</h1>
+        <p>
+            Tratamos con un Dataset con más de millón y medio de reviews entre los años 1998-2011 con cervezas de todo el mundo en donde se encuentra una descripción detallada de cada cerveza con caracteírsticas fundamentales como el ABV, sabor, apariencia, aroma...</p>
+        <p>
+            Dataset completo alojado en Drive Dataset con el original obtenido de Kaggle y otro creado por nosotros, el script se encuentra alojado en la carpeta code llamado Crear_dataset.py en donde cogiendo todos los aspectos específicos a los que se da una nota de 0-5 (sabor, apariencia, sensación, aroma, impresión general) se les aplican los siguientes porcentajes:
+        </p>
+        <p>
+            <li type="disc"> 6% Apariencia</li>
+            <li type="disc"> 24% Aroma</li>
+            <li type="disc"> 40% Sabor</li>
+            <li type="disc"> 10% Sensación</li>
+            <li type="disc"> 20% Impresión general</li>
+        <p>
+    </div>
+    <div id="manual">
+        <h1>manual</h1>
+        <h2>Manual de usuario para los scripts</h2>
+
+        <p>Para poder procesar los scripts que hemos desarrollado en un 
+        equipo Ubuntu o en una instancia de Google Cloud, antes se deben seguir los siguientes pasos:</p>
+        
+        <h3>Pasos a seguir</h3>
+        <ol class="lista">
+            <li>Instalación de Java</li>
+            <code>$ sudo apt install default-jre </code>
+            <code>$ java -version</code>
+            <li>Instalación de Python</li>
+            <code>$ sudo apt-get update</code>
+            <code>$ sudo apt-get install python3.6</code>
+            <li>Instalación de Spark</li>
+            <code>$ curl -O https://archive.apache.org/dist/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz</code>
+            <code>$ tar xvf spark-3.3.1-bin-hadoop3.tgz</code>
+            <code>$ sudo mv spark-3.3.1-bin-hadoop3 /usr/local/spark</code>
+            <li>Configuración del entorno</li>
+            <code>$ echo 'PATH="$PATH:/usr/local/spark/bin"' >> ~/.profile</code>
+            <code>$ source ~/.profile</code>
+            <li>Instalación de librerias</li>
+            <code>$ sudo apt install python3-pip</code>
+            <li>Comprobación de buena instalación</li>
+            <code>$ spark-submit /usr/local/spark/examples/src/main/python/pi.py 10</code>
+            <p>Si todo se ha instalado correctamente debería aparecer la siguiente línea: Pi is roughly 3.142480 </p>
+            <p>Una vez se ha efectuado la instalación correctamente, ya podemos ejecutar los scripts del proyecto usando el siguiente comando:</p>
+            <code>$ spark-submit "nombre_fichero.py"</code>
+        </ol>
+
+        <h3>Instancia en Google Cloud</h3>
+        <ol class="lista">
+            <li>Creación de Cluster en la consola de Cloud</li>
+            <code>$ gcloud dataproc clusters create example-cluster --region europe-west6 --master-boot-disk-size 50GB --worker-boot-disk-size 50GB --enable-component-gateway</code>
+            <li>Creación Bucket</li>
+            <ol>
+                <li>Ve a Navigation menu () > Cloud Storage > Buckets.</li>
+                <li>Click CREATE.</li>
+                <li>Rellena la información del bucket information y click CONTINUE para completar los siguientes pasos</li>
+                <ol>
+                    <li>Dar nombre al bucket: debe ser único.</li>
+                    <li>Elegir para <b>Location type</b>: Region y para Location: europe-west6 (Zurich).</li>
+                    <li>Elegir para <b>Default Storage Class</b>: Standard.</li>
+                    <li>Habilite <b>Enforce public access prevention on this bucket</b> y elija <b>Uniform for Access control</b>.</li>
+                    <li>Elija <b>None for Protection tools</b>.</li>
+                </ol>
+                <li>Click CREATE.</li>
+            </ol>
+            <li>Una vez ya creado el Cluster y el Bucket hay dos formas de ejecutar el código:</li>
+            <ol>
+                <li>Mediante envios de trabajos desde Cloud Shell:</li>
+                <code>$ BUCKET=gs://$BEER_DATA_PROJECT</code>
+                <code>$ gcloud dataproc jobs submit pyspark --cluster example-cluster --region=europe-west6 $BUCKET/<nombre_fichero.py> -- $BUCKET/<nombre_dataset.json> $BUCKET/<nombre_output></code>
+                <li>Mediantes envios de trabajo desde Cluster's Master Node: Ir a Dataproc > Cluster > Cluster_info > Virtual Machines y entrar en master usando SSH:</li>
+                <code>$ BUCKET=gs://$GOOGLE_CLOUD_PROJECT</code>
+                <code>$ spark-submit $BUCKET/wordcount.py $BUCKET/input $BUCKET/output3</code>
+            </ol>
+            <p>Se puede cambiar el número de executors y cores con los que queremos trabajar:</p>
+            <code>$ spark-submit --num-executors <n_executors> --executor-cores <n_cores> filter_cloud.py</code>
+        </ol>
+    </div>
+    <div id="statistics">
+        <h1>statistics</h1>
+        
+        <h2>performance</h2>
+        <p>
+            Tratamos con un Dataset con más de millón y medio de reviews entre los años 1998-2011 con cervezas de todo el mundo en donde se encuentra una descripción detallada de cada cerveza con caracteírsticas fundamentales como el ABV, sabor, apariencia, aroma...</p>
+        <p>
+            Dataset completo alojado en Drive Dataset con el original obtenido de Kaggle y otro creado por nosotros, el script se encuentra alojado en la carpeta code llamado Crear_dataset.py en donde cogiendo todos los aspectos específicos a los que se da una nota de 0-5 (sabor, apariencia, sensación, aroma, impresión general) se les aplican los siguientes porcentajes:
+        </p>
+
+        <h2>outcome</h2>
+        <p>
+            Tratamos con un Dataset con más de millón y medio de reviews entre los años 1998-2011 con cervezas de todo el mundo en donde se encuentra una descripción detallada de cada cerveza con caracteírsticas fundamentales como el ABV, sabor, apariencia, aroma...</p>
+        <p>
+            Dataset completo alojado en Drive Dataset con el original obtenido de Kaggle y otro creado por nosotros, el script se encuentra alojado en la carpeta code llamado Crear_dataset.py en donde cogiendo todos los aspectos específicos a los que se da una nota de 0-5 (sabor, apariencia, sensación, aroma, impresión general) se les aplican los siguientes porcentajes:
+        </p>
+    </div>
+    <div id="conclusion">
+        <h1>conclusion</h1>
+        <p>
+            Tratamos con un Dataset con más de millón y medio de reviews entre los años 1998-2011 con cervezas de todo el mundo en donde se encuentra una descripción detallada de cada cerveza con caracteírsticas fundamentales como el ABV, sabor, apariencia, aroma...</p>
+        <p>
+            Dataset completo alojado en Drive Dataset con el original obtenido de Kaggle y otro creado por nosotros, el script se encuentra alojado en la carpeta code llamado Crear_dataset.py en donde cogiendo todos los aspectos específicos a los que se da una nota de 0-5 (sabor, apariencia, sensación, aroma, impresión general) se les aplican los siguientes porcentajes:
+        </p>
+    </div>
+    <div id="contact">
+        <h1>members</h1>
+            <table>
+                <tr>
+                    <td>
+                        <div id="inner_div">
+                            <table id="inner_table">
+                                <tr>
+                                    <td><i class="fa-regular fa-user"></i> &nbsp; Rodrigo Gómez Serrano </td>
+                                    <td> <i class="fas fa-at"></i> &nbsp; rodgom02@ucm.es</td> 
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-user"></i> &nbsp; Alberto Gómez </td>
+                                    <td><i class="fas fa-at"></i> &nbsp; albgom29@ucm.es</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-user"></i> &nbsp; Gabriel Valcárcel </td>
+                                    <td><i class="fas fa-at"></i> &nbsp; gacasado@ucm.es</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-user"></i> &nbsp; Javier Gómez </td>
+                                    <td><i class="fas fa-at"></i> &nbsp; jagome11@ucm.es</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-map-marker-alt"></i>
+                                    <div id="address">
+                                        Facultad de Informática,<br>
+                                        Universidad Complutense de Madrid
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://github.com/ROGOSE/Beer-Data"><i class="fab fa-github"></i></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+    </div>
+    <div id="footer">
+        made by Beer Data <br> <a href="https://github.com/ROGOSE/Beer-Data">BeerDataViewer</a>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
