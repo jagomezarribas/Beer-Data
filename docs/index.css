@@ -176,7 +176,7 @@ header table {
 #project h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(226, 198, 35);
-    width:8%;
+    width:35%;
 }
 #photos {
     width:100%;
@@ -215,7 +215,7 @@ header table {
 #data h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(226, 198, 35);
-    width:76px;
+    width:35%;
 }
 #manual {
     width:92vw;
@@ -225,7 +225,7 @@ header table {
 #manual h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(226, 198, 35);
-    width:126px;
+    width:35%;
 }
 #statistics {
     width:92vw;
@@ -235,7 +235,7 @@ header table {
 #statistics h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(226, 198, 35);
-    width:146px;
+    width:35%;
 }
 #conclusion {
     width:92vw;
@@ -245,7 +245,7 @@ header table {
 #conclusion h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(226, 198, 35);
-    width:176px;  
+    width:35%;  
 }
 #contact {
     width:92vw;
@@ -254,7 +254,7 @@ header table {
 #contact h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(226, 198, 35);
-    width:11%;
+    width:35%;
 }
 #contact table {
     width:100%;
