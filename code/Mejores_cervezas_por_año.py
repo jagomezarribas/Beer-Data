@@ -1,13 +1,13 @@
 from datetime import datetime
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import udf, year, col, desc, avg, collect_list, round as spark_round, struct, slice, concat_ws, transform
+import sys
 
 #Configuración de la sesión de Spark
 sc = SparkSession.builder.appName("FavoriteBeerByYear").getOrCreate()
 
 #Cargamos el archivo JSON en un DataFrame
-path = "beeradvocate_note.json"
-df = sc.read.json(path)
+df = sc.read.json(sys.argv[1])
 
 #Convertimos a float la columna reivew/note para luego poder hacer la nota media
 df = df.withColumn("review/note", col("review/note").cast("float"))
@@ -57,7 +57,7 @@ df_top_beers = df_top_beers.withColumn("top_beers", concat_ws(", ", col("top_bee
 df_final = df_top_beers.orderBy(desc("review/year"))
 
 #Guardamos el Dataframe en un csv
-df_final.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("../CSV's/Mejores_cervezas_por_año/")
+df_final.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("sys.argv[2]/")
 
 df_final.show(df_final.count(), truncate=False)
 
