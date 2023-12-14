@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, avg, count, desc, max, min, first, round as spark_round
+import sys
 
 #Creamos una sesión de Spark
 sc = SparkSession.builder.appName("Popularidad").getOrCreate()
