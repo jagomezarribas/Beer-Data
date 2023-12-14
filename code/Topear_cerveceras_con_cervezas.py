@@ -1,12 +1,12 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, avg, collect_list, desc, round as spark_round, concat_ws
+import sys
 
 #Creamos una sesión de Spark
 sc = SparkSession.builder.appName("Topear_cerveceras").getOrCreate()
 
 #Cargamos el archivo JSON en un DataFrame
-path = "beeradvocate_note.json"
-df = sc.read.json(path)
+df = sc.read.json(sys.argv[1])
 
 #Añadimos una columna en la que pasamos la "review/note" a float para trabajar con sus datos como unidades
 df = df.withColumn("review/note", col("review/note").cast("float"))
@@ -22,7 +22,7 @@ df_agrupado = df_notas_medias.groupBy("beer/brewerId") \
 # Convertimos la columna "beer_names" a una cadena
 df_agrupado = df_agrupado.withColumn("beer_names", concat_ws(", ", col("beer_names")))
                 
-df_agrupado.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv("../CSV's/Topear_cerveceras_con_cervezas/")
+df_agrupado.coalesce(1).write.options(header = 'True', delimiter = ',').mode("overwrite").csv(sys.argv[2])
 df_agrupado.show(truncate=False)
 
 sc.stop()
